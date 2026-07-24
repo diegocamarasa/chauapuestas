@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La forma fácil de dejar de apostar — 30 días para recuperar el control</title>
+<meta name="description" content="30 días para salir del juego y recuperar el control. 30 pasos, ejercicios prácticos y plan antirrecaídas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#0b0b0d;
+    --black-2:#121216;
+    --card:#17171c;
+    --bone:#f2efe9;
+    --dim:#9a9aa3;
+    --red:#d92b2b;
+    --red-deep:#a31f1f;
+    --line:rgba(255,255,255,0.09);
+    --font-d:'Oswald',sans-serif;
+    --font-b:'Inter',sans-serif;
+    --maxw:1060px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--black);color:var(--bone);font-family:var(--font-b);line-height:1.55;-webkit-font-smoothing:antialiased;}
+  img{display:block;max-width:100%;}
+  a{color:inherit;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px;}
+  section{padding:84px 0;}
+  h1,h2,h3{font-family:var(--font-d);text-transform:uppercase;letter-spacing:0.015em;line-height:1.08;}
+  .kicker{
+    display:inline-block;font-family:var(--font-d);font-size:13px;letter-spacing:0.22em;
+    text-transform:uppercase;color:var(--red);font-weight:600;
+    border-left:3px solid var(--red);padding-left:10px;margin-bottom:16px;
+  }
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    font-family:var(--font-d);text-transform:uppercase;letter-spacing:0.08em;
+    font-weight:600;font-size:16px;padding:17px 30px;border:none;border-radius:6px;
+    cursor:pointer;text-decoration:none;transition:transform .15s,box-shadow .15s,background .15s;
+  }
+  .btn-red{background:var(--red);color:#fff;box-shadow:0 10px 30px rgba(217,43,43,0.35);}
+  .btn-red:hover{transform:translateY(-2px);background:#e83535;}
+  .btn-line{background:transparent;color:var(--bone);border:1px solid var(--line);}
+  .btn-line:hover{border-color:rgba(255,255,255,0.3);}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding:64px 0 72px;position:relative;overflow:hidden;
+    background:
+      radial-gradient(ellipse 800px 420px at 78% 30%, rgba(217,43,43,0.13), transparent 62%),
+      radial-gradient(ellipse 600px 380px at 0% 100%, rgba(255,255,255,0.03), transparent 60%);
+    border-bottom:1px solid var(--line);
+  }
+  .hero-grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:48px;align-items:center;}
+  .hero h1{font-size:clamp(36px,5vw,58px);margin:6px 0 8px;}
+  .hero h1 .white{color:var(--bone);}
+  .hero h1 .red{color:var(--red);display:block;font-size:clamp(44px,6.4vw,74px);}
+  .hero .sub{font-size:18px;color:var(--dim);max-width:470px;margin:18px 0 30px;}
+  .hero .sub strong{color:var(--bone);}
+  .badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px;}
+  .badge{
+    font-size:12.5px;font-weight:600;color:var(--dim);
+    border:1px solid var(--line);border-radius:100px;padding:7px 14px;
+  }
+  .badge b{color:var(--red);font-weight:700;}
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center;}
+  .hero-note{margin-top:16px;font-size:13px;color:var(--dim);}
+
+  .cover-stage{display:flex;justify-content:center;perspective:1400px;}
+  .cover-3d{
+    width:min(310px,72vw);transform:rotateY(-16deg) rotateX(1.5deg);
+    transform-style:preserve-3d;position:relative;
+    filter:drop-shadow(0 40px 50px rgba(0,0,0,0.75)) drop-shadow(0 0 60px rgba(217,43,43,0.12));
+    transition:transform .4s ease;
+  }
+  .cover-stage:hover .cover-3d{transform:rotateY(-9deg) rotateX(1deg);}
+  .cover-3d img{border-radius:3px 7px 7px 3px;border:1px solid rgba(255,255,255,0.06);}
+  .cover-3d::before{
+    content:'';position:absolute;left:-16px;top:1.5%;bottom:1.5%;width:16px;
+    background:linear-gradient(90deg,#050506,#1a1a1e);
+    transform:rotateY(88deg);transform-origin:right;border-radius:3px 0 0 3px;
+  }
+
+  /* ---------- COUNTER / CALCULATOR ---------- */
+  .calc{background:var(--black-2);border-bottom:1px solid var(--line);}
+  .calc-head{text-align:center;max-width:640px;margin:0 auto 44px;}
+  .calc-head h2{font-size:clamp(28px,3.6vw,42px);}
+  .calc-head h2 span{color:var(--red);}
+  .calc-head p{color:var(--dim);margin-top:12px;font-size:16px;}
+  .calc-card{
+    background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:38px;max-width:860px;margin:0 auto;
+  }
+  .sliders{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-bottom:34px;}
+  .slider-block label{display:block;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--dim);font-weight:600;margin-bottom:10px;}
+  .slider-block .val{font-family:var(--font-d);font-size:28px;font-weight:600;color:var(--bone);margin-bottom:12px;}
+  input[type=range]{width:100%;accent-color:var(--red);height:6px;}
+  .range-l{display:flex;justify-content:space-between;font-size:11.5px;color:var(--dim);margin-top:6px;}
+
+  .total-box{
+    text-align:center;border-top:1px dashed var(--line);border-bottom:1px dashed var(--line);
+    padding:30px 0;margin-bottom:28px;
+  }
+  .total-box .lbl{font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:var(--dim);font-weight:600;}
+  .total-box .big{
+    font-family:var(--font-d);font-weight:700;color:var(--red);
+    font-size:clamp(40px,6.5vw,64px);line-height:1.1;margin-top:8px;
+    font-variant-numeric:tabular-nums;
+  }
+  .total-box .sub{font-size:14px;color:var(--dim);margin-top:8px;}
+
+  .equiv{margin-top:6px;}
+  .equiv .lbl{font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:var(--dim);font-weight:600;text-align:center;margin-bottom:18px;}
+  .equiv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .equiv-item{
+    background:var(--black-2);border:1px solid var(--line);border-radius:10px;
+    padding:16px;text-align:center;
+  }
+  .equiv-item .n{font-family:var(--font-d);font-size:24px;font-weight:700;color:var(--bone);}
+  .equiv-item .t{font-size:12.5px;color:var(--dim);margin-top:4px;}
+
+  /* ---------- MIRROR ---------- */
+  .mirror-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:52px;align-items:start;margin-top:8px;}
+  .mirror h2{font-size:clamp(26px,3.2vw,38px);margin-bottom:14px;}
+  .mirror p{color:var(--dim);font-size:16px;}
+  .check-list{display:flex;flex-direction:column;gap:12px;}
+  .check{
+    display:flex;gap:14px;align-items:flex-start;background:var(--card);
+    border:1px solid var(--line);border-radius:10px;padding:16px 18px;cursor:pointer;
+    transition:border-color .15s;
+    user-select:none;
+  }
+  .check:hover{border-color:rgba(217,43,43,0.4);}
+  .check .box{
+    width:22px;height:22px;border:2px solid var(--dim);border-radius:5px;flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;font-size:14px;color:#fff;margin-top:1px;
+    transition:all .15s;
+  }
+  .check.on .box{background:var(--red);border-color:var(--red);}
+  .check.on .box::after{content:'✓';}
+  .check span{font-size:15px;color:var(--bone);}
+  .mirror-result{
+    margin-top:18px;font-size:14.5px;color:var(--dim);min-height:44px;
+    border-left:3px solid var(--red);padding-left:14px;display:none;
+  }
+  .mirror-result.show{display:block;}
+  .mirror-result strong{color:var(--bone);}
+
+  /* ---------- FAMILY COST ---------- */
+  .family{background:var(--black-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .family .inner{max-width:720px;margin:0 auto;text-align:center;}
+  .family h2{font-size:clamp(26px,3.4vw,40px);}
+  .family h2 span{color:var(--red);}
+  .family .lead{color:var(--dim);font-size:17px;margin:18px 0 36px;}
+  .cost-rows{display:flex;flex-direction:column;gap:2px;text-align:left;}
+  .cost-row{
+    display:flex;gap:18px;align-items:baseline;padding:18px 6px;
+    border-bottom:1px solid var(--line);
+  }
+  .cost-row:first-child{border-top:1px solid var(--line);}
+  .cost-row .w{font-family:var(--font-d);font-size:15px;font-weight:600;color:var(--red);letter-spacing:0.06em;text-transform:uppercase;white-space:nowrap;}
+  .cost-row .d{font-size:15px;color:var(--bone);}
+  .family .close{margin-top:32px;font-size:16px;color:var(--bone);font-weight:600;}
+
+  /* ---------- METHOD ---------- */
+  .method h2{font-size:clamp(26px,3.2vw,38px);}
+  .method .sub{color:var(--dim);margin-top:12px;max-width:560px;font-size:16px;}
+  .weeks{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px;}
+  .wk{
+    background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px 20px;
+    position:relative;overflow:hidden;
+  }
+  .wk::before{
+    content:attr(data-n);position:absolute;right:10px;top:-6px;
+    font-family:var(--font-d);font-size:74px;font-weight:700;color:rgba(255,255,255,0.045);line-height:1;
+  }
+  .wk .days{font-size:11.5px;letter-spacing:0.12em;text-transform:uppercase;color:var(--red);font-weight:700;margin-bottom:10px;}
+  .wk h3{font-size:17px;margin-bottom:8px;}
+  .wk p{font-size:13.5px;color:var(--dim);}
+
+  /* ---------- INCLUDES ---------- */
+  .includes{background:var(--black-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .inc-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:40px;}
+  .inc{
+    display:flex;gap:16px;align-items:flex-start;background:var(--card);
+    border:1px solid var(--line);border-radius:10px;padding:20px;
+  }
+  .inc .tag{
+    font-family:var(--font-d);font-weight:700;color:var(--red);font-size:15px;
+    min-width:44px;text-align:center;border:1px solid rgba(217,43,43,0.35);border-radius:7px;padding:8px 6px;
+  }
+  .inc h4{font-size:15.5px;margin-bottom:4px;}
+  .inc p{font-size:13.5px;color:var(--dim);}
+
+  /* ---------- PRICE ---------- */
+  .price .head{text-align:center;max-width:620px;margin:0 auto;}
+  .price h2{font-size:clamp(26px,3.4vw,40px);}
+  .price h2 span{color:var(--red);}
+  .vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:760px;margin:44px auto 0;}
+  .vs-card{border-radius:14px;padding:32px;text-align:center;border:1px solid var(--line);background:var(--card);}
+  .vs-card .l{font-size:12.5px;letter-spacing:0.12em;text-transform:uppercase;color:var(--dim);font-weight:700;}
+  .vs-card .n{font-family:var(--font-d);font-size:32px;font-weight:700;margin:10px 0 6px;}
+  .vs-card .s{font-size:13.5px;color:var(--dim);}
+  .vs-card.lose .n{color:var(--dim);text-decoration:line-through;text-decoration-color:rgba(217,43,43,0.7);text-decoration-thickness:3px;}
+  .vs-card.win{border-color:rgba(217,43,43,0.5);background:linear-gradient(165deg,rgba(217,43,43,0.1),var(--card));}
+  .vs-card.win .n{color:var(--red);font-size:40px;}
+  .guarantee{
+    max-width:560px;margin:30px auto 0;text-align:center;font-size:14px;color:var(--dim);
+    border:1px dashed var(--line);border-radius:10px;padding:16px 20px;
+  }
+  .countdown-bar{
+    max-width:640px;margin:40px auto 0;text-align:center;
+    background:linear-gradient(165deg,rgba(217,43,43,0.14),var(--card));
+    border:1px solid rgba(217,43,43,0.45);border-radius:14px;padding:22px 24px;
+  }
+  .cd-label{font-size:14px;color:var(--bone);margin-bottom:14px;}
+  .cd-label b{color:var(--red);}
+  .cd-timer{display:flex;justify-content:center;align-items:baseline;gap:8px;}
+  .cd-unit{display:flex;flex-direction:column;align-items:center;min-width:58px;}
+  .cd-n{
+    font-family:var(--font-d);font-weight:700;font-size:36px;color:var(--bone);
+    font-variant-numeric:tabular-nums;line-height:1;
+    background:var(--black);border:1px solid var(--line);border-radius:8px;
+    padding:10px 8px;width:100%;
+  }
+  .cd-t{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--dim);margin-top:6px;font-weight:600;}
+  .cd-sep{font-family:var(--font-d);font-size:28px;color:var(--red);font-weight:700;}
+  .guarantee b{color:var(--bone);}
+
+  /* ---------- PAYMENT ---------- */
+  .pay-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:860px;margin:44px auto 0;}
+  .pay{
+    background:var(--card);border:1px solid var(--line);border-radius:14px;padding:30px;
+    display:flex;flex-direction:column;gap:14px;
+  }
+  .pay h3{font-size:19px;}
+  .pay p{font-size:14px;color:var(--dim);flex-grow:1;}
+  .pay .hint{font-size:12px;color:var(--dim);}
+
+  /* ---------- FAQ ---------- */
+  .faq{background:var(--black-2);border-top:1px solid var(--line);}
+  details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin-bottom:12px;}
+  summary{cursor:pointer;font-weight:600;font-size:15.5px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;}
+  summary::-webkit-details-marker{display:none;}
+  summary::after{content:'+';font-family:var(--font-d);font-size:22px;color:var(--red);flex-shrink:0;}
+  details[open] summary::after{content:'–';}
+  details p{margin-top:12px;font-size:14.5px;color:var(--dim);line-height:1.6;}
+
+  /* ---------- FINAL ---------- */
+  .final{
+    text-align:center;padding:100px 0;
+    background:radial-gradient(ellipse 640px 380px at 50% 10%, rgba(217,43,43,0.14), transparent 65%);
+  }
+  .final h2{font-size:clamp(30px,4.2vw,48px);}
+  .final h2 span{color:var(--red);}
+  .final p{color:var(--dim);max-width:460px;margin:16px auto 34px;font-size:16px;}
+  footer{border-top:1px solid var(--line);padding:30px 0 100px;text-align:center;font-size:12.5px;color:var(--dim);}
+  footer p{max-width:600px;margin:0 auto 8px;}
+
+  /* sticky mobile CTA */
+  .sticky-cta{
+    position:fixed;left:0;right:0;bottom:0;z-index:50;
+    background:rgba(11,11,13,0.92);backdrop-filter:blur(8px);
+    border-top:1px solid var(--line);padding:12px 16px;
+    display:flex;align-items:center;justify-content:space-between;gap:14px;
+  }
+  .sticky-cta .p{font-family:var(--font-d);font-weight:700;font-size:18px;color:var(--bone);}
+  .sticky-cta .p small{display:block;font-family:var(--font-b);font-weight:500;font-size:11px;color:var(--dim);letter-spacing:0.04em;}
+  .sticky-cta .btn{padding:12px 22px;font-size:14px;}
+
+  @media (max-width:840px){
+    section{padding:60px 0;}
+    .hero-grid{grid-template-columns:1fr;text-align:center;}
+    .hero .sub{margin-left:auto;margin-right:auto;}
+    .badges,.cta-row{justify-content:center;}
+    .cover-stage{order:-1;}
+    .kicker{border-left:none;border-bottom:2px solid var(--red);padding:0 0 6px;}
+    .sliders{grid-template-columns:1fr;}
+    .equiv-grid{grid-template-columns:1fr;}
+    .mirror-grid{grid-template-columns:1fr;gap:32px;}
+    .weeks{grid-template-columns:1fr 1fr;}
+    .inc-grid{grid-template-columns:1fr;}
+    .vs-grid{grid-template-columns:1fr;}
+    .pay-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="kicker">Método de 30 días · Basado en evidencia</span>
+      <h1><span class="white">La forma fácil de</span> <span class="red">dejar de apostar</span></h1>
+      <p class="sub">Cada día que pasa, el juego te saca <strong>plata, tiempo y tranquilidad</strong>. Este libro es un plan de 30 días — paso por paso — para cortar el ciclo y recuperar el control de tu vida.</p>
+      <div class="badges">
+        <span class="badge"><b>30</b> pasos diarios</span>
+        <span class="badge">Ejercicios prácticos</span>
+        <span class="badge">Plan antirrecaídas</span>
+      </div>
+      <div class="cta-row">
+        <a href="#pago" class="btn btn-red">Quiero recuperar el control</a>
+        <a href="#calculadora" class="btn btn-line">Calculá cuánto perdiste ↓</a>
+      </div>
+      <p class="hero-note">Ebook digital · Acceso inmediato · Garantía de 7 días</p>
+    </div>
+    <div class="cover-stage">
+      <div class="cover-3d">
+        <img src="portada.jpg" alt="Portada del libro La forma fácil de dejar de apostar" width="310">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="calc" id="calculadora">
+  <div class="wrap">
+    <div class="calc-head">
+      <span class="kicker">El número que nadie quiere ver</span>
+      <h2>¿Cuánto le diste ya <span>al juego?</span></h2>
+      <p>Sé honesto con vos mismo. Mové las barras y mirá el número completo — no el de esta semana: el de todo este tiempo.</p>
+    </div>
+    <div class="calc-card">
+      <div class="sliders">
+        <div class="slider-block">
+          <label for="weekly">Lo que apostás por semana</label>
+          <div class="val" id="weeklyVal">200.000 Gs</div>
+          <input type="range" id="weekly" min="20000" max="2000000" step="10000" value="200000">
+          <div class="range-l"><span>20.000</span><span>2.000.000</span></div>
+        </div>
+        <div class="slider-block">
+          <label for="years">Hace cuánto que jugás</label>
+          <div class="val" id="yearsVal">2 años</div>
+          <input type="range" id="years" min="1" max="15" step="1" value="2">
+          <div class="range-l"><span>1 año</span><span>15 años</span></div>
+        </div>
+      </div>
+      <div class="total-box">
+        <div class="lbl">Total que ya se fue y no vuelve</div>
+        <div class="big" id="total">—</div>
+        <div class="sub">Y si no cortás ahora, el año que viene sumale <strong id="nextYear" style="color:var(--bone)">—</strong> más.</div>
+      </div>
+      <div class="equiv">
+        <div class="lbl">Con esa plata hoy tenías</div>
+        <div class="equiv-grid">
+          <div class="equiv-item"><div class="n" id="eqMoto">—</div><div class="t">motos 0 km (Gs 12M c/u)</div></div>
+          <div class="equiv-item"><div class="n" id="eqCuotas">—</div><div class="t">meses de alquiler (Gs 2,5M)</div></div>
+          <div class="equiv-item"><div class="n" id="eqVacas">—</div><div class="t">vacaciones familiares (Gs 8M)</div></div>
+        </div>
+      </div>
+      <div class="cta-row" style="justify-content:center;margin-top:30px;">
+        <a href="#pago" class="btn btn-red">Basta. Quiero cortar esto</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MIRROR -->
+<section>
+  <div class="wrap mirror-grid">
+    <div class="mirror">
+      <span class="kicker">Sin vueltas</span>
+      <h2>¿Te suena alguna de estas?</h2>
+      <p>No hace falta tocar fondo para admitir que el juego te está ganando. Marcá las que viviste — nadie más lo ve, es solo para vos.</p>
+      <div class="mirror-result" id="mirrorResult"></div>
+    </div>
+    <div class="check-list" id="checkList">
+      <div class="check"><div class="box"></div><span>Dijiste "la última y me voy" y seguiste jugando.</span></div>
+      <div class="check"><div class="box"></div><span>Apostaste plata que era para otra cosa: cuentas, comida, la familia.</span></div>
+      <div class="check"><div class="box"></div><span>Mentiste sobre cuánto perdiste — o directamente lo escondiste.</span></div>
+      <div class="check"><div class="box"></div><span>Intentaste recuperar lo perdido apostando más fuerte.</span></div>
+      <div class="check"><div class="box"></div><span>Alguien que te quiere ya te dijo que pares.</span></div>
+      <div class="check"><div class="box"></div><span>Después de jugar sentís culpa, vacío o bronca con vos mismo.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAMILY COST -->
+<section class="family">
+  <div class="wrap inner">
+    <span class="kicker">Lo que no aparece en la calculadora</span>
+    <h2>La plata se recupera. <span>Hay cosas que no.</span></h2>
+    <p class="lead">Cada guaraní que se fue en una apuesta tenía otro destino. Y cada hora en el juego también.</p>
+    <div class="cost-rows">
+      <div class="cost-row"><span class="w">La confianza</span><span class="d">de los que te esperaban en casa mientras vos "salías un rato".</span></div>
+      <div class="cost-row"><span class="w">La tranquilidad</span><span class="d">de llegar a fin de mes sin hacer malabares ni pedir prestado.</span></div>
+      <div class="cost-row"><span class="w">El tiempo</span><span class="d">con tus hijos, tu pareja, tus amigos — que se fue mirando una pantalla o una mesa.</span></div>
+      <div class="cost-row"><span class="w">El respeto</span><span class="d">por vos mismo, que se gasta un poquito con cada promesa que no cumpliste.</span></div>
+    </div>
+    <p class="close">La buena noticia: todo eso se puede reconstruir. Pero solo si cortás ahora — y con un plan.</p>
+  </div>
+</section>
+
+<!-- METHOD -->
+<section class="method">
+  <div class="wrap">
+    <span class="kicker">El plan</span>
+    <h2>30 días. 30 pasos. Un sistema.</h2>
+    <p class="sub">Dejar de apostar con pura fuerza de voluntad es como cruzar el Chaco a pie. Esto es distinto: un proceso ordenado, día por día, con herramientas respaldadas por la evidencia científica.</p>
+    <div class="weeks">
+      <div class="wk" data-n="1">
+        <div class="days">Días 1–7</div>
+        <h3>Frenar el impulso</h3>
+        <p>Cortar el piloto automático que te lleva a apostar sin siquiera decidirlo.</p>
+      </div>
+      <div class="wk" data-n="2">
+        <div class="days">Días 8–15</div>
+        <h3>Entender el patrón</h3>
+        <p>Identificar tus gatillos reales: emociones, horarios, lugares, gente.</p>
+      </div>
+      <div class="wk" data-n="3">
+        <div class="days">Días 16–23</div>
+        <h3>Reconstruir</h3>
+        <p>Llenar el hueco que deja el juego con cosas que te suman de verdad.</p>
+      </div>
+      <div class="wk" data-n="4">
+        <div class="days">Días 24–30</div>
+        <h3>Blindarte</h3>
+        <p>Tu plan antirrecaídas: qué hacer exactamente los días difíciles.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INCLUDES -->
+<section class="includes">
+  <div class="wrap">
+    <span class="kicker">Qué recibís</span>
+    <h2 style="font-size:clamp(26px,3.2vw,38px);">Todo lo necesario. Cero relleno.</h2>
+    <div class="inc-grid">
+      <div class="inc">
+        <div class="tag">30</div>
+        <div><h4>30 pasos diarios</h4><p>Uno por día, corto y accionable. No es un ladrillo de 400 páginas que abandonás en la semana 1.</p></div>
+      </div>
+      <div class="inc">
+        <div class="tag">EJ</div>
+        <div><h4>Ejercicios prácticos</h4><p>Cada semana trae ejercicios concretos para aplicar en tu vida real, no teoría de manual.</p></div>
+      </div>
+      <div class="inc">
+        <div class="tag">PLAN</div>
+        <div><h4>Plan antirrecaídas</h4><p>El protocolo exacto para el momento en que las ganas de apostar vuelven a golpear.</p></div>
+      </div>
+      <div class="inc">
+        <div class="tag">CIEN</div>
+        <div><h4>Basado en evidencia</h4><p>Herramientas respaldadas por la ciencia del comportamiento — no frases motivacionales vacías.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE -->
+<section class="price" id="precio">
+  <div class="wrap">
+    <div class="head">
+      <span class="kicker">Precio de lanzamiento</span>
+      <h2>Cuesta menos que <span>una sola noche de juego</span></h2>
+    </div>
+    <div class="countdown-bar" id="countdownBar">
+      <div class="cd-label">⏳ Precio de lanzamiento — el <span id="cdDateLabel">31 de julio</span> sube a <b>199.000 Gs</b></div>
+      <div class="cd-timer" id="cdTimer" aria-live="polite">
+        <div class="cd-unit"><span class="cd-n" id="cdD">--</span><span class="cd-t">días</span></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-unit"><span class="cd-n" id="cdH">--</span><span class="cd-t">hs</span></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-unit"><span class="cd-n" id="cdM">--</span><span class="cd-t">min</span></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-unit"><span class="cd-n" id="cdS">--</span><span class="cd-t">seg</span></div>
+      </div>
+    </div>
+    <div class="vs-grid">
+      <div class="vs-card lose">
+        <div class="l">Una noche apostando</div>
+        <div class="n">300.000 Gs</div>
+        <div class="s">Se fue. No volvió. Y encima dormiste mal.</div>
+      </div>
+      <div class="vs-card win">
+        <div class="l">Precio de lanzamiento</div>
+        <div class="n">149.000 Gs</div>
+        <div class="s">Pago único. Tuyo para siempre. Después del lanzamiento: 199.000 Gs.</div>
+      </div>
+    </div>
+    <div class="guarantee">🛡 <b>Garantía de 7 días:</b> si lo leés y sentís que no te sirvió, te devolvemos el dinero. Sin preguntas ni vueltas. Todo el riesgo lo asumimos nosotros.</div>
+  </div>
+</section>
+
+<!-- PAYMENT -->
+<section id="pago">
+  <div class="wrap">
+    <div class="price head" style="text-align:center;">
+      <span class="kicker">Empezá hoy</span>
+      <h2 style="font-size:clamp(26px,3.2vw,38px);">Elegí cómo pagar</h2>
+    </div>
+    <div class="pay-grid">
+      <div class="pay">
+        <h3>💳 Tarjeta — acceso inmediato</h3>
+        <p>Pagás online de forma segura y el libro te llega al instante a tu email. Procesado por Hotmart.</p>
+        <a href="HOTMART_LINK_AQUI" class="btn btn-red">Comprar con tarjeta — 149.000 Gs</a>
+        <span class="hint">Aceptamos crédito y débito.</span>
+      </div>
+      <div class="pay">
+        <h3>🏦 Transferencia — por WhatsApp</h3>
+        <p>Nos escribís, te pasamos los datos, transferís y te mandamos el libro apenas confirmamos. Simple y directo.</p>
+        <a href="https://wa.me/595984472119?text=Hola!%20Quiero%20el%20libro%20por%20transferencia%20bancaria" class="btn btn-line">Comprar por transferencia</a>
+        <span class="hint">Respondemos rápido, todos los días.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="wrap">
+    <span class="kicker">Dudas frecuentes</span>
+    <h2 style="font-size:clamp(26px,3.2vw,38px);margin-bottom:30px;">Antes de que preguntes</h2>
+    <div style="max-width:720px;">
+      <details>
+        <summary>¿Sirve si ya intenté dejar y recaí varias veces?</summary>
+        <p>Sí — y de hecho el libro está pensado para eso. El plan antirrecaídas de la semana 4 existe justamente porque las recaídas son parte del proceso, no el final. La diferencia esta vez es que vas a tener un sistema, no solo ganas.</p>
+      </details>
+      <details>
+        <summary>¿Esto reemplaza terapia o un grupo de ayuda?</summary>
+        <p>No. Es una herramienta estructurada para el día a día, y para muchos alcanza. Pero si tu situación es severa, lo mejor es combinarlo con acompañamiento profesional. El libro suma en cualquiera de los dos casos.</p>
+      </details>
+      <details>
+        <summary>¿Cómo y cuándo recibo el libro?</summary>
+        <p>Es 100% digital (PDF). Si pagás con tarjeta, te llega al email al instante. Si pagás por transferencia, te lo mandamos por WhatsApp apenas se confirma — normalmente en minutos.</p>
+      </details>
+      <details>
+        <summary>¿Puedo leerlo desde el celular?</summary>
+        <p>Sí, está pensado para leerse desde el celular, tablet o computadora. Un paso por día, a tu ritmo.</p>
+      </details>
+      <details>
+        <summary>¿Y si no me funciona?</summary>
+        <p>Tenés 7 días de garantía total. Si sentís que no te sirvió, te devolvemos la plata sin preguntas. El único escenario en el que perdés es seguir igual que hoy.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="final">
+  <div class="wrap">
+    <span class="kicker">La decisión es hoy</span>
+    <h2>El juego ya te sacó bastante.<br><span>No le des ni un día más.</span></h2>
+    <p>149.000 Gs · Pago único · Acceso inmediato · Garantía de 7 días</p>
+    <a href="#pago" class="btn btn-red">Empezar mis 30 días</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Este material es una herramienta de apoyo y no reemplaza tratamiento profesional. Si sentís que necesitás ayuda adicional, buscá acompañamiento de un profesional de la salud.</p>
+    <p>© 2026 La forma fácil de dejar de apostar · Alejandro Montaner. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<!-- STICKY CTA -->
+<div class="sticky-cta" id="stickyCta" style="display:none;">
+  <div class="p">149.000 Gs<small>Precio de lanzamiento · Garantía 7 días</small></div>
+  <a href="#pago" class="btn btn-red">Comprar</a>
+</div>
+
+<script>
+  // ---- Calculadora ----
+  const weekly = document.getElementById('weekly');
+  const years = document.getElementById('years');
+  const weeklyVal = document.getElementById('weeklyVal');
+  const yearsVal = document.getElementById('yearsVal');
+  const total = document.getElementById('total');
+  const nextYear = document.getElementById('nextYear');
+  const eqMoto = document.getElementById('eqMoto');
+  const eqCuotas = document.getElementById('eqCuotas');
+  const eqVacas = document.getElementById('eqVacas');
+
+  function gs(n){ return Math.round(n).toLocaleString('es-PY') + ' Gs'; }
+
+  function calc(){
+    const w = parseInt(weekly.value,10);
+    const y = parseInt(years.value,10);
+    weeklyVal.textContent = gs(w);
+    yearsVal.textContent = y + (y===1?' año':' años');
+    const t = w * 52 * y;
+    total.textContent = gs(t);
+    nextYear.textContent = gs(w*52);
+    eqMoto.textContent = Math.floor(t/12000000);
+    eqCuotas.textContent = Math.floor(t/2500000);
+    eqVacas.textContent = Math.floor(t/8000000);
+  }
+  weekly.addEventListener('input', calc);
+  years.addEventListener('input', calc);
+  calc();
+
+  // ---- Checklist espejo ----
+  const list = document.getElementById('checkList');
+  const result = document.getElementById('mirrorResult');
+  list.querySelectorAll('.check').forEach(c=>{
+    c.addEventListener('click', ()=>{
+      c.classList.toggle('on');
+      const n = list.querySelectorAll('.check.on').length;
+      if(n===0){ result.classList.remove('show'); return; }
+      result.classList.add('show');
+      if(n<=2){
+        result.innerHTML = 'Marcaste <strong>'+n+'</strong>. Todavía estás a tiempo de cortar antes de que se ponga más pesado. Este es el mejor momento para empezar.';
+      } else if(n<=4){
+        result.innerHTML = 'Marcaste <strong>'+n+' de 6</strong>. El juego ya está manejando partes de tu vida. La buena noticia: con un plan de 30 días, esto se corta.';
+      } else {
+        result.innerHTML = 'Marcaste <strong>'+n+' de 6</strong>. Ya lo sabés: esto no se arregla solo. Pero se arregla — con un sistema, paso por paso. Empezá hoy.';
+      }
+    });
+  });
+
+  // ---- Countdown de lanzamiento ----
+  // ⚙️ CONFIGURACIÓN: cambiá esta fecha por el día real en que sube el precio.
+  // Formato: año, mes (0=enero ... 11=diciembre), día, hora, minuto — hora de Paraguay.
+  const LAUNCH_END = new Date(2026, 6, 31, 23, 59, 59); // 31 de julio 2026, 23:59
+  const cdD = document.getElementById('cdD');
+  const cdH = document.getElementById('cdH');
+  const cdM = document.getElementById('cdM');
+  const cdS = document.getElementById('cdS');
+  const cdBar = document.getElementById('countdownBar');
+  const meses = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+  document.getElementById('cdDateLabel').textContent = LAUNCH_END.getDate() + ' de ' + meses[LAUNCH_END.getMonth()];
+  function pad(n){ return String(n).padStart(2,'0'); }
+  function tick(){
+    const diff = LAUNCH_END - new Date();
+    if(diff <= 0){ cdBar.style.display = 'none'; return; }
+    cdD.textContent = pad(Math.floor(diff/86400000));
+    cdH.textContent = pad(Math.floor(diff/3600000)%24);
+    cdM.textContent = pad(Math.floor(diff/60000)%60);
+    cdS.textContent = pad(Math.floor(diff/1000)%60);
+    requestAnimationFrame ? setTimeout(tick, 1000) : setTimeout(tick, 1000);
+  }
+  tick();
+
+  // ---- Sticky CTA (aparece tras pasar el hero) ----
+  const sticky = document.getElementById('stickyCta');
+  const hero = document.querySelector('.hero');
+  window.addEventListener('scroll', ()=>{
+    const past = window.scrollY > hero.offsetHeight;
+    const nearPay = document.getElementById('pago').getBoundingClientRect().top < window.innerHeight;
+    sticky.style.display = (past && !nearPay) ? 'flex' : 'none';
+  }, {passive:true});
+</script>
+
+</body>
+</html>
