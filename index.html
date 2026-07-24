@@ -236,8 +236,24 @@
     background:var(--card);border:1px solid var(--line);border-radius:14px;padding:30px;
     display:flex;flex-direction:column;gap:14px;
   }
-  .pay h3{font-size:19px;}
-  .pay p{font-size:14px;color:var(--dim);flex-grow:1;}
+  .pay.pay-primary{
+    border-color:rgba(217,43,43,0.55);
+    background:linear-gradient(160deg,rgba(217,43,43,0.12),var(--card) 55%);
+    box-shadow:0 20px 40px rgba(217,43,43,0.14);
+    position:relative;
+  }
+  .pay-flag{
+    display:inline-flex;align-items:center;gap:8px;align-self:flex-start;
+    font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;
+    color:var(--bone);background:rgba(217,43,43,0.18);border:1px solid rgba(217,43,43,0.4);
+    padding:6px 12px;border-radius:100px;
+  }
+  .pay h3{font-size:22px;}
+  .pay-sub{font-size:13.5px;color:var(--red);font-weight:600;margin-top:-6px;}
+  .pay p{font-size:14px;color:var(--dim);}
+  .pay-perks{list-style:none;padding:0;margin:4px 0 6px;display:flex;flex-direction:column;gap:8px;}
+  .pay-perks li{font-size:13.5px;color:var(--bone);}
+  .pay-perks li b{color:var(--red);}
   .pay .hint{font-size:12px;color:var(--dim);}
 
   /* ---------- FAQ ---------- */
@@ -303,7 +319,7 @@
         <span class="badge">Plan antirrecaídas</span>
       </div>
       <div class="cta-row">
-        <a href="#pago" class="btn btn-red">Quiero recuperar el control</a>
+        <a href="https://wa.me/595984472119?text=Hola!%20Quiero%20el%20libro%20por%20transferencia%20bancaria" class="btn btn-red">🇵🇾 Comprar por WhatsApp</a>
         <a href="#calculadora" class="btn btn-line">Calculá cuánto perdiste ↓</a>
       </div>
       <p class="hero-note">Ebook digital · Acceso inmediato · Garantía de 7 días</p>
@@ -353,7 +369,7 @@
         </div>
       </div>
       <div class="cta-row" style="justify-content:center;margin-top:30px;">
-        <a href="#pago" class="btn btn-red">Basta. Quiero cortar esto</a>
+        <a href="https://wa.me/595984472119?text=Hola!%20Quiero%20el%20libro%20por%20transferencia%20bancaria" class="btn btn-red">Basta. Quiero cortar esto — WhatsApp</a>
       </div>
     </div>
   </div>
@@ -495,17 +511,23 @@
       <h2 style="font-size:clamp(26px,3.2vw,38px);">Elegí cómo pagar</h2>
     </div>
     <div class="pay-grid">
-      <div class="pay">
-        <h3>💳 Tarjeta — acceso inmediato</h3>
-        <p>Pagás online de forma segura y el libro te llega al instante a tu email. Procesado por Hotmart.</p>
-        <a href="https://pay.hotmart.com/A106866164N?bid=1784875725722" class="btn btn-red">Comprar con tarjeta — 149.000 Gs</a>
-        <span class="hint">Aceptamos crédito y débito.</span>
+      <div class="pay pay-primary">
+        <div class="pay-flag">🇵🇾 Método preferido en Paraguay</div>
+        <h3>Comprar por WhatsApp</h3>
+        <div class="pay-sub">Pago por transferencia bancaria</div>
+        <p>Nos escribís, te pasamos los datos de la cuenta, transferís y te enviamos el libro apenas confirmamos. Simple, rápido y directo.</p>
+        <ul class="pay-perks">
+          <li>🔒 <b>100% de anonimato</b> — nadie más se entera de tu compra</li>
+          <li>⚡ Respuesta rápida, todos los días</li>
+          <li>💰 Sin comisiones ni cargos extra</li>
+        </ul>
+        <a href="https://wa.me/595984472119?text=Hola!%20Quiero%20el%20libro%20por%20transferencia%20bancaria" class="btn btn-red">Comprar por WhatsApp — 149.000 Gs</a>
       </div>
       <div class="pay">
-        <h3>🏦 Transferencia — por WhatsApp</h3>
-        <p>Nos escribís, te pasamos los datos, transferís y te mandamos el libro apenas confirmamos. Simple y directo.</p>
-        <a href="https://wa.me/595984472119?text=Hola!%20Quiero%20el%20libro%20por%20transferencia%20bancaria" class="btn btn-line">Comprar por transferencia</a>
-        <span class="hint">Respondemos rápido, todos los días.</span>
+        <h3>💳 Comprar con tarjeta</h3>
+        <div class="pay-sub">Crédito o débito · Procesado por Hotmart</div>
+        <p>Pagás online de forma segura y el libro te llega al instante a tu email. Ideal si preferís pagar con tarjeta internacional.</p>
+        <a href="https://pay.hotmart.com/A106866164N?bid=1784875725722" class="btn btn-line">Pagar con tarjeta — 149.000 Gs</a>
       </div>
     </div>
   </div>
@@ -547,7 +569,7 @@
     <span class="kicker">La decisión es hoy</span>
     <h2>El juego ya te sacó bastante.<br><span>No le des ni un día más.</span></h2>
     <p>149.000 Gs · Pago único · Acceso inmediato · Garantía de 7 días</p>
-    <a href="#pago" class="btn btn-red">Empezar mis 30 días</a>
+    <a href="https://wa.me/595984472119?text=Hola!%20Quiero%20el%20libro%20por%20transferencia%20bancaria" class="btn btn-red">🇵🇾 Empezar por WhatsApp</a>
   </div>
 </section>
 
@@ -561,7 +583,7 @@
 <!-- STICKY CTA -->
 <div class="sticky-cta" id="stickyCta" style="display:none;">
   <div class="p">149.000 Gs<small>Precio de lanzamiento · Garantía 7 días</small></div>
-  <a href="#pago" class="btn btn-red">Comprar</a>
+  <a href="https://wa.me/595984472119?text=Hola!%20Quiero%20el%20libro%20por%20transferencia%20bancaria" class="btn btn-red">🇵🇾 WhatsApp</a>
 </div>
 
 <script>
